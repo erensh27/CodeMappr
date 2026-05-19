@@ -26,4 +26,5 @@ class ProjectProfile:
     total_files: int
     total_dirs: int
     total_size_bytes: int
+    confidence: str = "low"
     framework: Optional[str] = None
