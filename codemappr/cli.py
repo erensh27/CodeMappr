@@ -2,6 +2,9 @@ import typer
 from typing import Optional
 from rich.console import Console
 from codemappr.walker import scan_directory
+from codemappr.detector import detect_project
+from codemappr.explainer import explain_project
+from codemappr.display import render_terminal
 
 app = typer.Typer(help="CodeMappr: Instantly understand any codebase.")
 console = Console()
@@ -19,8 +22,11 @@ def scan(
     if ignore:
         ignore_patterns = [p.strip() for p in ignore.split(",")]
 
-    scan_directory(path, depth=depth, ignore_patterns=ignore_patterns)
-    console.print("[green]Scan complete[/green]")
+    node = scan_directory(path, depth=depth, ignore_patterns=ignore_patterns)
+    profile = detect_project(node, path)
+    explanation = explain_project(profile, node)
+
+    render_terminal(node, profile, explanation)
 
 @app.callback(invoke_without_command=True)
 def main(ctx: typer.Context):
