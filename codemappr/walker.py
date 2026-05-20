@@ -138,17 +138,21 @@ def scan_directory(path: str, depth: Optional[int] = None, ignore_patterns: Opti
                 if should_ignore(item_path, ignore_patterns, root_path):
                     continue
 
-                child_node = scan_directory(
-                    item_path,
-                    depth=depth,
-                    ignore_patterns=ignore_patterns,
-                    root_path=root_path,
-                    current_depth=current_depth + 1
-                )
-                node.children.append(child_node)
-                node.size += child_node.size
+                try:
+                    child_node = scan_directory(
+                        item_path,
+                        depth=depth,
+                        ignore_patterns=ignore_patterns,
+                        root_path=root_path,
+                        current_depth=current_depth + 1
+                    )
+                    node.children.append(child_node)
+                    node.size += child_node.size
+                except PermissionError:
+                    # Warn and skip that subtree
+                    print(f"Warning: Permission denied for {item_path}. Skipping.")
         except PermissionError:
             # Skip directories we can't access
-            pass
+            print(f"Warning: Permission denied for {actual_path}. Skipping.")
 
     return node
