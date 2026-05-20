@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMappr Report — app</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-main: #c9d1d9;
+            --text-dim: #8b949e;
+            --accent: #58a6ff;
+            --success: #238636;
+            --folder-color: #7d8590;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        h1 { color: var(--accent); margin-bottom: 5px; }
+        .meta { color: var(--text-dim); font-size: 0.9em; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        td:first-child { font-weight: bold; width: 40%; color: var(--text-dim); }
+
+        .summary-card { margin-bottom: 30px; }
+
+        .list-items {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .badge {
+            background: var(--border-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+        }
+
+        .tree-container {
+            background: #010409;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+
+        .folder { margin-left: 15px; }
+        .folder-header {
+            cursor: pointer;
+            user-select: none;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .folder-header:hover { background: #1f242c; }
+        .toggle-icon {
+            display: inline-block;
+            width: 1em;
+            transition: transform 0.2s;
+            color: var(--text-dim);
+        }
+        .folder.collapsed > .folder-header .toggle-icon {
+            transform: rotate(-90deg);
+        }
+        .folder.collapsed > .folder-content {
+            display: none;
+        }
+        .file {
+            margin-left: 20px;
+            padding: 2px 5px;
+            color: var(--text-main);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.8em;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CodeMappr Report — app</h1>
+            <div class="meta">Generated on 2026-05-20 03:28:28 by CodeMappr v1.0.0</div>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Project Profile</h2>
+                <table>
+                    <tr><td>Type</td><td><span style="color: var(--success); font-weight: bold;">Python Package/Library</span></td></tr>
+                    <tr><td>Stack</td><td>HTML, Python</td></tr>
+                    <tr><td>Framework</td><td>—</td></tr>
+                    <tr><td>Files</td><td>45</td></tr>
+                    <tr><td>Directories</td><td>9</td></tr>
+                    <tr><td>Size</td><td>2.2 MB</td></tr>
+                    <tr><td>Confidence</td><td>medium</td></tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Key Structure</h2>
+                <table>
+                    <tr><td>docs</td><td>Project documentation</td></tr> <tr><td>tests</td><td>Test suite</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="card summary-card">
+            <h2>Architecture Summary</h2>
+            <p>This project is a Python Package/Library application developed in HTML, Python. It consists of 45 files across 9 directories. The codebase structure suggests it follows standard conventions for Python Package/Library development.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Entry Points</h2>
+                <div class="list-items">
+
+                </div>
+            </div>
+            <div class="card">
+                <h2>Notable Files</h2>
+                <div class="list-items">
+                    <span class="badge" style="color: #d29922;">pyproject.toml</span> <span class="badge" style="color: #d29922;">.gitignore</span> <span class="badge" style="color: #d29922;">README.md</span> <span class="badge" style="color: #d29922;">LICENSE</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Directory Tree</h2>
+            <div class="tree-container">
+                <div class="folder"><div class="folder-header" onclick="toggleFolder(this)"><span class="toggle-icon">▼</span> 📁 app</div><div class="folder-content"><div class="folder"><div class="folder-header" onclick="toggleFolder(this)"><span class="toggle-icon">▼</span> 📁 .github</div><div class="folder-content"><div class="folder"><div class="folder-header" onclick="toggleFolder(this)"><span class="toggle-icon">▼</span> 📁 ISSUE_TEMPLATE</div><div class="folder-content"><div class="file">📄 bug_report.md</div><div class="file">📄 feature_request.md</div></div></div><div class="folder"><div class="folder-header" onclick="toggleFolder(this)"><span class="toggle-icon">▼</span> 📁 workflows</div><div class="folder-content"><div class="file">⚙️ publish.yml</div><div class="file">⚙️ test.yml</div></div></div><div class="file">📄 PULL_REQUEST_TEMPLATE.md</div></div></div><div class="folder"><div class="folder-header" onclick="toggleFolder(this)"><span class="toggle-icon">▼</span> 📁 codemappr</div><div class="folder-content"><div class="file">🐍 __init__.py</div><div class="file">🐍 cli.py</div><div class="file">🐍 detector.py</div><div class="file">🐍 display.py</div><div class="file">🐍 explainer.py</div><div class="file">🐍 exporter.py</div><div class="file">🐍 models.py</div><div class="file">🐍 walker.py</div></div></div><div class="folder"><div class="folder-header" onclick="toggleFolder(this)"><span class="toggle-icon">▼</span> 📁 codemappr.egg-info</div><div class="folder-content"><div class="file">📄 PKG-INFO</div><div class="file">📄 SOURCES.txt</div><div class="file">📄 dependency_links.txt</div><div class="file">📄 entry_points.txt</div><div class="file">📄 requires.txt</div><div class="file">📄 top_level.txt</div></div></div><div class="folder"><div class="folder-header" onclick="toggleFolder(this)"><span class="toggle-icon">▼</span> 📁 docs</div><div class="folder-content"><div class="folder"><div class="folder-header" onclick="toggleFolder(this)"><span class="toggle-icon">▼</span> 📁 screenshots</div><div class="folder-content"><div class="file">📄 DEMO.html</div><div class="file">📄 DEMO.md</div><div class="file">📄 README_SCREENSHOTS.md</div><div class="file">📄 format-all.png</div><div class="file">📄 format_all_output.html</div><div class="file">📄 html-export.png</div><div class="file">📄 markdown-export.png</div><div class="file">📄 md_preview.html</div><div class="file">📄 terminal-view.png</div><div class="file">📄 terminal_output.html</div></div></div></div></div><div class="folder"><div class="folder-header" onclick="toggleFolder(this)"><span class="toggle-icon">▼</span> 📁 tests</div><div class="folder-content"><div class="file">🐍 __init__.py</div><div class="file">🐍 conftest.py</div><div class="file">🐍 test_detector.py</div><div class="file">🐍 test_explainer.py</div><div class="file">🐍 test_exporters.py</div><div class="file">🐍 test_models.py</div><div class="file">🐍 test_walker.py</div></div></div><div class="file">📄 .gitignore</div><div class="file">📄 CHANGELOG.md</div><div class="file">📄 CODEMAPPR.html</div><div class="file">📄 CODEMAPPR.md</div><div class="file">📄 LICENSE</div><div class="file">📄 README.md</div><div class="file">🐍 capture_screenshots.py</div><div class="file">🐍 generate_terminal_html.py</div><div class="file">⚙️ pyproject.toml</div></div></div>
+            </div>
+        </div>
+
+        <footer>
+            Generated by CodeMappr v1.0.0 · github.com/yourusername/codemappr
+        </footer>
+    </div>
+
+    <script>
+        function toggleFolder(element) {
+            const folder = element.parentElement;
+            folder.classList.toggle('collapsed');
+        }
+    </script>
+</body>
+</html>

@@ -9,10 +9,22 @@ description = "Instantly understand any codebase."
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
+keywords = ["cli", "codebase", "documentation", "developer-tools", "static-analysis", "project-analysis"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Utilities",
+]
 dependencies = [
     "typer[all]",
     "rich",
 ]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/codemappr"
+Repository = "https://github.com/yourusername/codemappr"
 
 [project.scripts]
 codemappr = "codemappr.cli:app"
