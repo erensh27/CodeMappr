@@ -20,3 +20,7 @@ codemappr = "codemappr.cli:app"
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["codemappr*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
