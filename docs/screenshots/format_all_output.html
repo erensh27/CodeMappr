@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #00ffff; text-decoration-color: #00ffff; font-weight: bold}
+.r2 {color: #dfdfdf; text-decoration-color: #dfdfdf}
+.r3 {color: #808000; text-decoration-color: #808000}
+.r4 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r5 {color: #008080; text-decoration-color: #008080}
+.r6 {color: #808000; text-decoration-color: #808000; font-weight: bold}
+.r7 {color: #c0c0c0; text-decoration-color: #c0c0c0}
+.r8 {color: #c0c0c0; text-decoration-color: #c0c0c0; font-weight: bold}
+.r9 {color: #7f7f7f; text-decoration-color: #7f7f7f; font-style: italic}
+.r10 {color: #000080; text-decoration-color: #000080; font-weight: bold}
+.r12 {color: #800080; text-decoration-color: #800080}
+.r13 {color: #008000; text-decoration-color: #008000}
+.r14 {color: #7f7f7f; text-decoration-color: #7f7f7f}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ <span class="r1">CodeMappr</span>                                                                                        │
+│ <span class="r2">Codebase Intelligence</span>                                                                            │
+│ <span class="r3">app</span>                                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Project Profile ────────────────────────────────────────────────────────────────────────────────╮
+│  Type         <span class="r4">Python Package/Library</span>                                                             │
+│  Stack        <span class="r5">HTML · Python</span>                                                                      │
+│  Framework    —                                                                                  │
+│  Total Files  45                                                                                 │
+│  Total Dirs   9                                                                                  │
+│  Size         2.2 MB                                                                             │
+│  Confidence   <span class="r6">medium</span>                                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Architecture Summary ───────────────────────────────────────────────────────────────────────────╮
+│ <span class="r7">This project is a Python Package/Library application developed in HTML, Python. It consists of </span>  │
+│ <span class="r7">45 files across 9 directories. The codebase structure suggests it follows standard conventions </span>  │
+│ <span class="r7">for Python Package/Library development.</span>                                                          │
+│                                                                                                  │
+│ <span class="r8">Key Folders:</span>                                                                                     │
+│ <span class="r7">📁 docs </span><span class="r9">→ Project documentation</span>                                                                  │
+│ <span class="r7">📁 tests </span><span class="r9">→ Test suite</span>                                                                            │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Entry Points ─╮ ╭─ Notable Files ───╮
+│                │ │ <span class="r3">📄 pyproject.toml</span> │
+╰────────────────╯ │ <span class="r3">📄 .gitignore</span>     │
+                   │ <span class="r3">📄 README.md</span>      │
+                   │ <span class="r3">📄 LICENSE</span>        │
+                   │                   │
+                   ╰───────────────────╯
+╭─ Directory Tree ─────────────────────────────────────────────────────────────────────────────────╮
+│ <span class="r10">📁 app</span>                                                                                           │
+│ <span class="r11">├── </span><span class="r10">📁 .github</span>                                                                                   │
+│ <span class="r11">│   ├── </span><span class="r10">📁 ISSUE_TEMPLATE</span>                                                                        │
+│ <span class="r11">│   │   ├── </span><span class="r7">📄 bug_report.md</span>                                                                     │
+│ <span class="r11">│   │   └── </span><span class="r7">📄 feature_request.md</span>                                                                │
+│ <span class="r11">│   ├── </span><span class="r7">📄 PULL_REQUEST_TEMPLATE.md</span>                                                              │
+│ <span class="r11">│   └── </span><span class="r10">📁 workflows</span>                                                                             │
+│ <span class="r11">│       ├── </span><span class="r12">⚙️ publish.yml</span>                                                                       │
+│ <span class="r11">│       └── </span><span class="r12">⚙️ test.yml</span>                                                                          │
+│ <span class="r11">├── </span><span class="r7">📄 .gitignore</span>                                                                                │
+│ <span class="r11">├── </span><span class="r7">📄 CHANGELOG.md</span>                                                                              │
+│ <span class="r11">├── </span><span class="r7">📄 CODEMAPPR.html</span>                                                                            │
+│ <span class="r11">├── </span><span class="r7">📄 CODEMAPPR.md</span>                                                                              │
+│ <span class="r11">├── </span><span class="r7">📄 LICENSE</span>                                                                                   │
+│ <span class="r11">├── </span><span class="r7">📄 README.md</span>                                                                                 │
+│ <span class="r11">├── </span><span class="r13">🐍 capture_screenshots.py</span>                                                                    │
+│ <span class="r11">├── </span><span class="r10">📁 codemappr</span>                                                                                 │
+│ <span class="r11">│   ├── </span><span class="r13">🐍 __init__.py</span>                                                                           │
+│ <span class="r11">│   ├── </span><span class="r13">🐍 cli.py</span>                                                                                │
+│ <span class="r11">│   ├── </span><span class="r13">🐍 detector.py</span>                                                                           │
+│ <span class="r11">│   ├── </span><span class="r13">🐍 display.py</span>                                                                            │
+│ <span class="r11">│   ├── </span><span class="r13">🐍 explainer.py</span>                                                                          │
+│ <span class="r11">│   ├── </span><span class="r13">🐍 exporter.py</span>                                                                           │
+│ <span class="r11">│   ├── </span><span class="r13">🐍 models.py</span>                                                                             │
+│ <span class="r11">│   └── </span><span class="r13">🐍 walker.py</span>                                                                             │
+│ <span class="r11">├── </span><span class="r10">📁 codemappr.egg-info</span>                                                                        │
+│ <span class="r11">│   ├── </span><span class="r7">📄 PKG-INFO</span>                                                                              │
+│ <span class="r11">│   ├── </span><span class="r7">📄 SOURCES.txt</span>                                                                           │
+│ <span class="r11">│   ├── </span><span class="r7">📄 dependency_links.txt</span>                                                                  │
+│ <span class="r11">│   ├── </span><span class="r7">📄 entry_points.txt</span>                                                                      │
+│ <span class="r11">│   ├── </span><span class="r7">📄 requires.txt</span>                                                                          │
+│ <span class="r11">│   └── </span><span class="r7">📄 top_level.txt</span>                                                                         │
+│ <span class="r11">├── </span><span class="r10">📁 docs</span>                                                                                      │
+│ <span class="r11">│   └── </span><span class="r10">📁 screenshots</span>                                                                           │
+│ <span class="r11">│       ├── </span><span class="r7">📄 DEMO.html</span>                                                                         │
+│ <span class="r11">│       ├── </span><span class="r7">📄 DEMO.md</span>                                                                           │
+│ <span class="r11">│       ├── </span><span class="r7">📄 README_SCREENSHOTS.md</span>                                                             │
+│ <span class="r11">│       ├── </span><span class="r7">📄 format-all.png</span>                                                                    │
+│ <span class="r11">│       ├── </span><span class="r7">📄 format_all_output.html</span>                                                            │
+│ <span class="r11">│       ├── </span><span class="r7">📄 html-export.png</span>                                                                   │
+│ <span class="r11">│       ├── </span><span class="r7">📄 markdown-export.png</span>                                                               │
+│ <span class="r11">│       ├── </span><span class="r7">📄 md_preview.html</span>                                                                   │
+│ <span class="r11">│       ├── </span><span class="r7">📄 terminal-view.png</span>                                                                 │
+│ <span class="r11">│       └── </span><span class="r7">📄 terminal_output.html</span>                                                              │
+│ <span class="r11">├── </span><span class="r13">🐍 generate_terminal_html.py</span>                                                                 │
+│ <span class="r11">├── </span><span class="r12">⚙️ pyproject.toml</span>                                                                            │
+│ <span class="r11">└── </span><span class="r10">📁 tests</span>                                                                                     │
+│ <span class="r11">    ├── </span><span class="r13">🐍 __init__.py</span>                                                                           │
+│ <span class="r11">    ├── </span><span class="r13">🐍 conftest.py</span>                                                                           │
+│ <span class="r11">    ├── </span><span class="r13">🐍 test_detector.py</span>                                                                      │
+│ <span class="r11">    ├── </span><span class="r13">🐍 test_explainer.py</span>                                                                     │
+│ <span class="r11">    ├── </span><span class="r13">🐍 test_exporters.py</span>                                                                     │
+│ <span class="r11">    ├── </span><span class="r13">🐍 test_models.py</span>                                                                        │
+│ <span class="r11">    └── </span><span class="r13">🐍 test_walker.py</span>                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+                 <span class="r14">Generated by CodeMappr v1.0.0 · github.com/yourusername/codemappr</span>
+<span class="r4">✓</span> Exported Markdown report to: <span class="r5">CODEMAPPR.md</span>
+<span class="r4">✓</span> Exported HTML report to: <span class="r5">CODEMAPPR.html</span>
+</code></pre>
+</body>
+</html>
