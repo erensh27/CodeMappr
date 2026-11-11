@@ -3,6 +3,7 @@ import os
 from typing import Optional
 from rich.console import Console
 from rich.panel import Panel
+from codemappr import __version__
 from codemappr.walker import scan_directory
 from codemappr.detector import detect_project
 from codemappr.explainer import explain_project
@@ -11,7 +12,7 @@ from codemappr.exporter import export_markdown, export_html
 
 app = typer.Typer(help="CodeMappr: Instantly understand any codebase.")
 console = Console()
-VERSION = "1.0.0"
+VERSION = __version__
 
 def version_callback(value: bool):
     if value:
